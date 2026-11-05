@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бильярдный клуб «Кий»</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Бильярдный клуб «Кий»</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Бронирование</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container py-4">
+      <h1 class="display-4 fw-bold">Бильярдный клуб «Кий»</h1>
+      <p class="lead">Профессиональные столы, уютная атмосфера и отличный отдых.</p>
+      <button class="btn btn-light btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#orderModal">Забронировать стол</button>
+    </div>
+  </header>
+
+  <main class="flex-grow-1">
+    <section class="container my-5">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Профессиональные столы</h5>
+              <p class="card-text text-muted">Идеальное сукно и откалиброванные борта.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Уютная атмосфера</h5>
+              <p class="card-text text-muted">Приглушенный свет и комфортные зоны отдыха.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Опытные тренеры</h5>
+              <p class="card-text text-muted">Помогут новичкам освоить азы игры.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Популярные услуги</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/russian.jpg" class="card-img-top" alt="Русский бильярд" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <h5 class="card-title">Русский бильярд</h5>
+                <span class="badge bg-danger">Скидка</span>
+              </div>
+              <p class="card-text text-muted">Классический стол для точной игры.</p>
+              <p class="fw-bold fs-5 mt-auto">800 руб./час</p>
+              <a href="product.html" class="btn btn-outline-primary">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/pool.jpg" class="card-img-top" alt="Американский пул" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <h5 class="card-title">Американский пул</h5>
+                <span class="badge bg-success">Новинка</span>
+              </div>
+              <p class="card-text text-muted">Динамичная игра для компании.</p>
+              <p class="fw-bold fs-5 mt-auto">1000 руб./час</p>
+              <a href="product.html" class="btn btn-outline-primary">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/vip.jpg" class="card-img-top" alt="VIP-зона" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <h5 class="card-title">VIP-зона</h5>
+                <span class="badge bg-warning text-dark">Хит</span>
+              </div>
+              <p class="card-text text-muted">Отдельная комната для вас и друзей.</p>
+              <p class="fw-bold fs-5 mt-auto">2000 руб./час</p>
+              <a href="product.html" class="btn btn-outline-primary">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <p class="mb-0">&copy; 2026 Бильярдный клуб «Кий». Все права защищены.</p>
+  </footer>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Быстрая заявка</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Имя</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Телефон</label>
+              <input type="tel" class="form-control" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="btn btn-primary rounded-circle shadow" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 20px; z-index: 1000;">↑</a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
