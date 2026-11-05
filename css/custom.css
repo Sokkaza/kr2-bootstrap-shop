@@ -44,9 +44,19 @@ h5,
 }
 
 .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   color: var(--club-gold) !important;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+.club-mark {
+  width: 1.65rem;
+  height: 1.65rem;
+  flex: 0 0 auto;
+  color: var(--club-gold);
 }
 
 .navbar .nav-link {
@@ -58,6 +68,77 @@ h5,
 .navbar .nav-link.active {
   color: #f4dfaa !important;
   background-color: rgba(214, 182, 111, 0.14);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 1.25rem;
+}
+
+.navbar-phone {
+  color: #f5f1e7;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar-phone:hover {
+  color: var(--club-gold);
+}
+
+.navbar-booking {
+  white-space: nowrap;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1000;
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: none;
+}
+
+.cue-stick {
+  position: absolute;
+  width: 0.3rem;
+  height: 2.45rem;
+  border: 1px solid rgba(65, 39, 20, 0.65);
+  border-radius: 999px;
+  background: linear-gradient(to bottom, #f8edcf 0 12%, #d6b66f 12% 21%, #9a6033 21% 87%, #e0c182 87%);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+  transform: rotate(38deg);
+}
+
+.photo-credit {
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.photo-credit a {
+  color: #647064;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.photo-credit a:hover {
+  color: var(--bs-primary);
 }
 
 header.bg-primary,
@@ -215,11 +296,82 @@ footer.bg-dark {
   border-top: 3px solid var(--club-gold);
 }
 
+.club-footer {
+  color: #f5f1e7 !important;
+}
+
+.club-footer .text-muted {
+  color: rgba(245, 241, 231, 0.76) !important;
+}
+
+.club-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--club-gold);
+  font-size: 1.5rem;
+}
+
+.club-footer-heading {
+  color: #fffaf0;
+}
+
+.club-footer-nav a,
+.club-footer-contact {
+  color: #f5f1e7;
+  text-decoration: none;
+}
+
+.club-footer-nav a:hover,
+.club-footer-contact[href]:hover {
+  color: var(--club-gold);
+}
+
+.club-footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.footer-address-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  color: var(--club-gold);
+}
+
+.club-footer-bottom {
+  border-top: 1px solid rgba(214, 182, 111, 0.25);
+  padding-top: 1.25rem;
+}
+
+.club-footer-cta {
+  background: linear-gradient(135deg, #1c704e, #14543d) !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .back-to-top {
+    right: 0.9rem;
+    bottom: 0.9rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0;
+    padding: 0.75rem 0 0;
+    border-top: 1px solid rgba(214, 182, 111, 0.28);
   }
 }
