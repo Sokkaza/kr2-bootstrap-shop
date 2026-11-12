@@ -21,6 +21,13 @@ body {
   background-image: radial-gradient(rgba(75, 58, 38, 0.045) 0.7px, transparent 0.7px);
   background-size: 7px 7px;
   font-family: "Segoe UI", Tahoma, sans-serif;
+  transition: background-color 350ms ease, color 350ms ease, background-image 350ms ease;
+}
+
+html[data-theme="dark"] body {
+  color: #e8eee8;
+  background-color: #151c18 !important;
+  background-image: radial-gradient(rgba(221, 231, 220, 0.045) 0.7px, transparent 0.7px);
 }
 
 main {
@@ -90,6 +97,16 @@ h5,
 
 .navbar-booking {
   white-space: nowrap;
+}
+
+.theme-toggle {
+  display: inline-grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 0;
+  font-size: 1.2rem;
 }
 
 .back-to-top {
@@ -291,6 +308,21 @@ header h1 {
   border: 1px solid rgba(214, 182, 111, 0.7);
 }
 
+body,
+.card,
+.list-group-item,
+.accordion-item,
+.accordion-button,
+.modal-content,
+.bg-white,
+.table,
+.form-control,
+.form-select,
+.input-group-text,
+.booking-total {
+  transition: background-color 350ms ease, color 350ms ease, border-color 350ms ease;
+}
+
 .form-control,
 .form-select,
 .input-group-text {
@@ -409,5 +441,66 @@ footer.bg-dark {
     margin: 0.5rem 0 0;
     padding: 0.75rem 0 0;
     border-top: 1px solid rgba(214, 182, 111, 0.28);
+  }
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .list-group-item,
+html[data-theme="dark"] .accordion-item,
+html[data-theme="dark"] .accordion-button,
+html[data-theme="dark"] .modal-content,
+html[data-theme="dark"] .bg-white {
+  color: #e8eee8;
+  background-color: #202a24 !important;
+  border-color: #3b4a40;
+}
+
+html[data-theme="dark"] .accordion-button:not(.collapsed) {
+  color: #e8eee8;
+  background-color: #293a30 !important;
+}
+
+html[data-theme="dark"] .text-muted {
+  color: #b6c1b8 !important;
+}
+
+html[data-theme="dark"] .table {
+  --bs-table-color: #e8eee8;
+  --bs-table-bg: #202a24;
+  --bs-table-striped-bg: #26332b;
+  --bs-table-striped-color: #e8eee8;
+  --bs-table-border-color: #3b4a40;
+}
+
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-select,
+html[data-theme="dark"] .input-group-text {
+  color: #e8eee8;
+  background-color: #202a24;
+  border-color: #526457;
+}
+
+html[data-theme="dark"] .form-control::placeholder {
+  color: #aeb9b0;
+}
+
+html[data-theme="dark"] .booking-total {
+  background-color: #26372d;
+  border-color: #476653;
+}
+
+html[data-theme="dark"] .booking-total-amount {
+  color: #b9d8c2;
+}
+
+html[data-theme="dark"] .alert-info {
+  color: #d7e8df;
+  background-color: #203b33;
+  border-color: #386451;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition-duration: 0.01ms;
   }
 }
