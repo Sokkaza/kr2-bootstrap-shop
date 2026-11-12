@@ -255,6 +255,42 @@ header h1 {
   background-color: rgba(255, 253, 247, 0.8);
 }
 
+.record-medal {
+  display: inline-block;
+  width: 1.8rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.medal-gold {
+  color: #b8860b;
+}
+
+.medal-silver {
+  color: #75808a;
+}
+
+.medal-bronze {
+  color: #a45a32;
+}
+
+.booking-total {
+  background: #e8eee5;
+  border: 1px solid rgba(23, 96, 68, 0.2);
+}
+
+.booking-total-amount {
+  display: block;
+  color: var(--club-felt);
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.champion-panel {
+  background: linear-gradient(145deg, #173f30, #286447);
+  border: 1px solid rgba(214, 182, 111, 0.7);
+}
+
 .form-control,
 .form-select,
 .input-group-text {
